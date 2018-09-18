@@ -37,8 +37,7 @@ public class SecondServlet extends HttpServlet {
 	        try {
 	        	Response<HashMap<String,Integer>> resp = new Response<>();
 	        	HashMap<String,Integer> map = new HashMap<String, Integer>();
-	        	map.put("key1", 12);
-	        	map.put("key2", 58);
+	        	map.put("age", Integer.valueOf(request.getParameter("age")));
 	        	resp.setMessage("Handling Hashmap to create JSON");
 	            resp.setStatus(200);
 	            resp.setData(map);
